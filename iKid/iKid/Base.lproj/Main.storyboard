@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ma7-EG-MzW">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--goodView-->
+        <scene sceneID="dZv-pK-2OY">
+            <objects>
+                <viewController title="goodView" id="rSP-vd-OEj" customClass="goodView" customModule="iKid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YaV-Zo-gLL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k4k-i7-Qx5" userLabel="good_Next">
+                                <rect key="frame" x="327" y="588" width="32" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="k4k-i7-Qx5" secondAttribute="height" multiplier="16:15" id="kij-1m-6Qh"/>
+                                </constraints>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="flipView:" destination="rSP-vd-OEj" eventType="touchUpInside" id="eTi-X1-1kJ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Knock Knock Joke" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pe5-pm-GO1" userLabel="good_Label">
+                                <rect key="frame" x="16" y="314.5" width="343" height="38.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blessyou" translatesAutoresizingMaskIntoConstraints="NO" id="REY-Md-Bl2">
+                                <rect key="frame" x="16" y="116.5" width="343" height="434"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="REY-Md-Bl2" firstAttribute="centerX" secondItem="YaV-Zo-gLL" secondAttribute="centerX" id="5Yn-cK-dhU"/>
+                            <constraint firstItem="hda-wj-jXL" firstAttribute="trailing" secondItem="REY-Md-Bl2" secondAttribute="trailing" constant="16" id="GRF-rj-Zro"/>
+                            <constraint firstItem="hda-wj-jXL" firstAttribute="trailing" secondItem="REY-Md-Bl2" secondAttribute="trailing" constant="16" id="Jku-Lt-xcT"/>
+                            <constraint firstItem="REY-Md-Bl2" firstAttribute="leading" secondItem="hda-wj-jXL" secondAttribute="leading" constant="16" id="LbS-cI-0Bw"/>
+                            <constraint firstItem="REY-Md-Bl2" firstAttribute="centerY" secondItem="YaV-Zo-gLL" secondAttribute="centerY" id="Len-ua-WYr"/>
+                            <constraint firstItem="pe5-pm-GO1" firstAttribute="centerY" secondItem="YaV-Zo-gLL" secondAttribute="centerY" id="a4v-qN-BTi"/>
+                            <constraint firstItem="k4k-i7-Qx5" firstAttribute="bottom" secondItem="hda-wj-jXL" secondAttribute="bottom" id="d69-d8-QeC"/>
+                            <constraint firstItem="hda-wj-jXL" firstAttribute="trailing" secondItem="pe5-pm-GO1" secondAttribute="trailing" constant="16" id="gov-vH-ZKT"/>
+                            <constraint firstItem="REY-Md-Bl2" firstAttribute="leading" secondItem="hda-wj-jXL" secondAttribute="leading" constant="16" id="ozH-oD-LXZ"/>
+                            <constraint firstItem="hda-wj-jXL" firstAttribute="bottom" secondItem="REY-Md-Bl2" secondAttribute="bottom" constant="67.5" id="vpw-Df-BfY"/>
+                            <constraint firstItem="hda-wj-jXL" firstAttribute="trailing" secondItem="k4k-i7-Qx5" secondAttribute="trailing" constant="16" id="yaR-mv-O5u"/>
+                            <constraint firstItem="pe5-pm-GO1" firstAttribute="leading" secondItem="hda-wj-jXL" secondAttribute="leading" constant="16" id="zaS-ih-HSv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hda-wj-jXL"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Good Joke" id="1Cg-vS-JOx" userLabel="Good Joke"/>
+                    <connections>
+                        <outlet property="image" destination="REY-Md-Bl2" id="bH3-ar-iQ7"/>
+                        <outlet property="nextButton" destination="k4k-i7-Qx5" id="Wby-7g-MNg"/>
+                        <outlet property="textLabel" destination="pe5-pm-GO1" id="fFO-mj-Xk1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hZj-RN-fgO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-610" y="528"/>
+        </scene>
+        <!--dadView-->
+        <scene sceneID="257-vJ-cWk">
+            <objects>
+                <viewController title="dadView" id="JMQ-71-Ggm" customClass="DadView" customModule="iKid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QBR-Qc-Alx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N0Y-IW-RSL" userLabel="dad_Next">
+                                <rect key="frame" x="327" y="588" width="32" height="30"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="flipView:" destination="JMQ-71-Ggm" eventType="touchDown" id="MWx-In-Zav"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dad Joke" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CMc-LR-NdA" userLabel="dad_Label">
+                                <rect key="frame" x="16" y="314.5" width="343" height="38.5"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Qcy-If-9xV" firstAttribute="trailing" secondItem="CMc-LR-NdA" secondAttribute="trailing" constant="16" id="BD2-Ij-nnF"/>
+                            <constraint firstItem="N0Y-IW-RSL" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Qcy-If-9xV" secondAttribute="leading" symbolic="YES" id="Hlt-pR-PJd"/>
+                            <constraint firstItem="N0Y-IW-RSL" firstAttribute="trailing" secondItem="QBR-Qc-Alx" secondAttribute="trailingMargin" id="NL4-Ey-dhD"/>
+                            <constraint firstItem="CMc-LR-NdA" firstAttribute="centerY" secondItem="QBR-Qc-Alx" secondAttribute="centerY" id="VRs-T6-ngQ"/>
+                            <constraint firstItem="N0Y-IW-RSL" firstAttribute="bottom" secondItem="Qcy-If-9xV" secondAttribute="bottom" id="iIp-97-l87"/>
+                            <constraint firstItem="CMc-LR-NdA" firstAttribute="leading" secondItem="Qcy-If-9xV" secondAttribute="leading" constant="16" id="y5S-fd-eER"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Qcy-If-9xV"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Dad Joke" id="9Bl-IT-PQk"/>
+                    <connections>
+                        <outlet property="nextButton" destination="N0Y-IW-RSL" id="XmX-Ye-EVj"/>
+                        <outlet property="textLabel" destination="CMc-LR-NdA" id="fJc-2F-M3R"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1zx-SA-45m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-610.39999999999998" y="-913.49325337331345"/>
+        </scene>
+        <!--punView-->
+        <scene sceneID="rGw-CQ-KoM">
+            <objects>
+                <viewController title="punView" id="ZDs-RP-2Uz" customClass="punView" customModule="iKid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="urX-Mz-Y5i">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cfj-v8-7Kk" userLabel="pun_Next">
+                                <rect key="frame" x="327" y="588" width="32" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Cfj-v8-7Kk" secondAttribute="height" multiplier="16:15" id="gob-7Y-7BG"/>
+                                </constraints>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="flipView:" destination="ZDs-RP-2Uz" eventType="touchDown" id="7YE-Km-x6N"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pun Joke" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N7d-bN-XUR" userLabel="pun_Label">
+                                <rect key="frame" x="16" y="129" width="343" height="409"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="N7d-bN-XUR" firstAttribute="centerY" secondItem="urX-Mz-Y5i" secondAttribute="centerY" id="MVB-W9-qBH"/>
+                            <constraint firstItem="N7d-bN-XUR" firstAttribute="top" secondItem="qF1-kk-taZ" secondAttribute="top" constant="109" id="QFM-6h-Bgo"/>
+                            <constraint firstItem="N7d-bN-XUR" firstAttribute="leading" secondItem="qF1-kk-taZ" secondAttribute="leading" constant="16" id="QNQ-ho-1Jh"/>
+                            <constraint firstItem="Cfj-v8-7Kk" firstAttribute="bottom" secondItem="qF1-kk-taZ" secondAttribute="bottom" id="X77-wB-aaJ"/>
+                            <constraint firstAttribute="trailing" secondItem="N7d-bN-XUR" secondAttribute="trailing" constant="16" id="Yhh-9w-r2O"/>
+                            <constraint firstItem="qF1-kk-taZ" firstAttribute="trailing" secondItem="Cfj-v8-7Kk" secondAttribute="trailing" constant="16" id="nFM-ec-w9o"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qF1-kk-taZ"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Pun Joke" id="LT7-9U-I1B"/>
+                    <connections>
+                        <outlet property="nextButton" destination="Cfj-v8-7Kk" id="eQu-BI-AFb"/>
+                        <outlet property="textLabel" destination="N7d-bN-XUR" id="wjk-eM-agY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kjL-z9-Rie" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-610.39999999999998" y="-209.14542728635683"/>
+        </scene>
+        <!--intial view-->
+        <scene sceneID="qUe-vn-sww">
+            <objects>
+                <tabBarController title="intial view" id="ma7-EG-MzW" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZWK-Hz-Zth">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="JMQ-71-Ggm" kind="relationship" relationship="viewControllers" id="6En-0K-sgM"/>
+                        <segue destination="rSP-vd-OEj" kind="relationship" relationship="viewControllers" id="MVL-zE-U9U"/>
+                        <segue destination="ZDs-RP-2Uz" kind="relationship" relationship="viewControllers" id="jcG-i7-MSW"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PKc-Ei-TU3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1533" y="-250"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="blessyou" width="650" height="434"/>
+    </resources>
+</document>
